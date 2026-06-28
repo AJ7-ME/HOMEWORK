@@ -1,0 +1,17 @@
+from tkinter import *
+def Multiply():
+    ans = float(entry1.get()) * float(entry2.get())
+    result.config(text=f"Result: {ans:.2f}")
+root = Tk()
+root.title("Multiplication Calculator")
+root.geometry("400x400")
+Label(root, text="Number 1:").grid(row=0, column=0)
+entry1 = Entry(root)
+entry1.grid(row=0, column=1)
+Label(root, text="Number 2:").grid(row=1, column=0)
+entry2 = Entry(root)
+entry2.grid(row=1, column=1)
+Button(root, text="Multiply", command=Multiply).grid(row=2, column=0, columnspan=2)
+result = Label(root, text="")
+result.grid(row=3, column=0, columnspan=2)
+root.mainloop()
