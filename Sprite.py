@@ -15,13 +15,10 @@ def main():
 
     x, y = 30, 30
     sprite_width, sprite_height = 75, 60
-    clock = pygame.time.Clock()
-    
+
         #Non - Movable Sprite
-    xx, yy = 300, 200
+    xx, yy = 300, 30
     ssprite_width, ssprite_height = 75, 60
-    pygame.draw.rect(screen, current_color, (xx, yy, ssprite_width, ssprite_height))
-    current_color = colors['yellow']
     clock = pygame.time.Clock()
 
     done = False
@@ -43,9 +40,11 @@ def main():
         else: current_color = colors['white']
         screen.fill((0, 0, 0))
         pygame.draw.rect(screen, current_color, (x, y, sprite_width, sprite_height))
+        current_color = colors['yellow']
+        pygame.draw.rect(screen, colors['yellow'], (xx, yy, ssprite_width, ssprite_height))
         pygame.display.flip()
         clock.tick(90)
     pygame.quit()
     
-if _name_ == "_main_":
+if __name__ == "__main__":
     main()
