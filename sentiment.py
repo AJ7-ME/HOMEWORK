@@ -28,7 +28,7 @@ def show_stats():
 def show_history():
     print("\n Conversation History")
     for i, (text, sentiment, polarity) in enumerate(history, 1):
-        print(f"{i}. {text} → {sentiment} ({polarity:.2f})")
+        print(f"{i}. {text} -> {sentiment} ({polarity:.2f})")
     print()
 
 def reset_data():
