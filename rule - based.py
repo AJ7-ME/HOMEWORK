@@ -25,7 +25,7 @@ while True:
         print("I hope you have a nice day.")
 
     elif any(word in message for word in weather_keywords):
-        print("The weather is sunny with a chance of rain later today.")
+        print("The weather is sunny with a chance of rain later today.") 
 
     elif any(word in message for word in news_keywords):
         print("Today's news: Scientists continue making exciting discoveries.")
