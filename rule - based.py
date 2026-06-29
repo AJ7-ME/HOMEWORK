@@ -13,7 +13,7 @@ name = input("What is your name? ")
 print("Hello,", name)
 
 while True:
-    message = input("\nWhat would you like to talk about? ").lower().strip()
+    message = input("\nWhat would you like to talk about, Weather?, News?, Time? ").lower().strip()
 
     if any(word in message for word in good_keywords):
         print("I'm glad you're feeling good.")
